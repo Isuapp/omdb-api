@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const useMovies = ()=>{
 
     const API_KEY = "731e41f";
-    const URL = `http://www.omdbapi.com/?type=${TYPE}&s=${HARRY_POTTER}&apikey=${API_KEY}` 
+    const URL = `http://www.omdbapi.com/?&apikey=${API_KEY}` 
 
     // Manjeador del estado
     const [movies, setMovies] = useState([])
@@ -18,3 +18,6 @@ const useMovies = ()=>{
     }, []);
     return movies;
 }
+
+
+export default useMovies;

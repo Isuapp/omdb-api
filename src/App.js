@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Sandbox from './components/sandbox';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
        <h1>oMdb API</h1>
       </header>
+      <Sandbox/>
     </div>
   );
 }

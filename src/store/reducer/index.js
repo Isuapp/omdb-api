@@ -1,4 +1,10 @@
-const reducer = (state, action)=>{
+const initialState = {
+    favoriteMovies:[],
+    starWarsMovies: []
+}
+
+
+const reducer = (state=initialState, action) => {
     return state;
 
 }

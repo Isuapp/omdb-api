@@ -14,7 +14,7 @@ const useSearchMovies = (searchValue) => {
             .then(response => response.json())
             .then(data => setSearchMovies(data.Search))
             .catch((error) => {
-                console.Console.toString('Error en la petición api', error)
+                console.Console.toString('Error', error)
             })
     }, []);
     return searchMovies;

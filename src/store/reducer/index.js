@@ -5,7 +5,15 @@ const initialState = {
 
 
 const reducer = (state=initialState, action) => {
-    return state;
+
+
+    switch (action.type) {
+        case "ADD_MOVIE":
+            return { ...state, favoriteMovies: [...state.favoriteMovies, action.payload]}
+            default:
+                return state;
+    }
+   
 
 }
 

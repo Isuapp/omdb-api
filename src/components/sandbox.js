@@ -1,24 +1,27 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import useMovies from '../store/hooks/useMovies';
+import React, { useState } from "react";
 import searchMovies from "../store/hooks/useSearchMovies";
-
 
 const Sandbox = () => {
 
 
-    const movies = useMovies(URL)
-    console.log('Movies', movies)
-    const favoriteMovies = useSelector(state => state.favoriteMovies)
-    console.log('Favorite Movies', favoriteMovies)
-    const starWarsMovies = useSelector(state => state.starWarsMovies)
-    console.log('Star Wars Movies', starWarsMovies)
+    
+    const [search, setSearch] = useState('')   
+    const onChangeHandler = e =>{
+        setSearch(e.target.value)
+        console.log('Search result', searchMovies(search))
+    } 
 
-    console.log('search movies', searchMovies('hola'))
+    const handleInput =()=> {
+        
+        console.log('valor del input', search)
+    }
+    
     return (
         <div>
             <h1>Sandbox</h1>
             <div>
+                <input type="text" value={search} onChange={onChangeHandler}/>
+                <button onClick={handleInput()}>buscar</button>
 
             </div>
         </div>

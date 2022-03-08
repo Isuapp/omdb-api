@@ -18,8 +18,16 @@
 .App-link {
   color: #61dafb;
 }
-
-
+.divimage{
+  border:1px solid pink;
+  width: 100px;
+  height: 100px;
+}
+.image{
+  width:100px;
+  height: 200px;
+  border:1px solid green;
+}
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import SearchSection from "../sections/SearchSection";
 import useSearchMovies from "../store/hooks/useSearchMovies";
-import axios from 'axios'
+import SearchBox from "./fields/SearchBox";
 
 const Sandbox = () => {
 
@@ -48,10 +49,11 @@ const Sandbox = () => {
     return (
         <div>
             <h1>Sandbox</h1>
-            <div>
-                <input type="text" value={search} onChange={onChangeHandler} />
-                {/* <button onClick={handleInput}>search</button> */}
-            </div>
+            <SearchBox 
+                placeholder="Search..."
+                value={search}
+                change={onChangeHandler}
+            />
             {
                 movies === undefined
                     ?
@@ -63,6 +65,7 @@ const Sandbox = () => {
                         ))}
                     </ul>
             }
+            <SearchSection />
         </div>
 
     );

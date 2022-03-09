@@ -1,18 +1,18 @@
 import React from "react";
 import '../../../src/App.css'
-import Poster from "../../assets/images/214511.jpg"
 
 
 export const SmallCard = props => {
-    const { title, image, alt } = props
+    const { title, image, alt, year } = props
 
     return (
         <div>
             <div className="divimage">
-                <image src="../../assets/images/214511.jpg" className="image" alt={alt} />
+                <img src={image} className="image" alt={alt} />
             </div>
 
             <h4>{title}</h4>
+            <p>{year}</p>
         </div>
     )
 }

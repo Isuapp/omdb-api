@@ -3,42 +3,27 @@ import useSearchMovies from "../store/hooks/useSearchMovies";
 import axios from 'axios'
 
 const Sandbox = () => {
+
+    ///////////////////////WITH A SEARCH BUTTON////////////////////////
     // const [search, setSearch] = useState('');
     // const [movies, setMovies] = useState([]);
 
     // const { searchMovies } = useSearchMovies();
 
-    // const onChangeHandler = e =>  setSearch(e.target.value)
+    // const onChangeHandler = e => {
+    //   setSearch(e.target.value)
+    // };
 
     // const handleInput = async () => {
-    //     console.log('valor del input', search);
-    //     try {
-    //         const movies = await searchMovies(search);
-    //         setMovies(movies);
-    //     } catch (error) {
-    //         // handle error/set any error state/etc...
-    //     }
+    //   console.log('valor del input', search);
+    //   try {
+    //     const movies = await searchMovies(search);
+    //     setMovies(movies);
+    //   } catch (error) {
+    //     // handle error/set any error state/etc...
+    //   }
     // }
-
-    // const [search, setSearch] = useState('');
-    // const [movies, setMovies] = useState([])
-
-    // const { searchMovies } = useSearchMovies();
-
-    // useEffect(() => {
-    //     const loadMovies = async () => {
-    //         console.log('valor del input', search);
-    //         try {
-    //             const movies = await searchMovies(search);
-    //             setMovies(movies);
-    //         } catch (error) {
-    //             // handle error/set any error state/etc...
-    //         }
-    //     }
-    //     loadMovies()
-    // }, [] )
-    // const onChangeHandler = e =>  setSearch(e.target.value)
-
+    ////////////////////////////////////////////////////////////////////
 
 
     const [search, setSearch] = useState('');
@@ -57,18 +42,8 @@ const Sandbox = () => {
         }
 
     }
-    console.log('movies antes', movies)
- 
 
-    // const handleInput = async () => {
-    //     console.log('valor del input', search);
-    //     try {
-    //         const movies = await searchMovies(search);
-    //         setMovies(movies);
-    //     } catch (error) {
-    //         // handle error/set any error state/etc...
-    //     }
-    // }
+
 
     return (
         <div>
@@ -78,18 +53,16 @@ const Sandbox = () => {
                 {/* <button onClick={handleInput}>search</button> */}
             </div>
             {
-                movies ===  undefined ? <h1>¿pelis?</h1> :
+                movies === undefined
+                    ?
+                    <h1>¿pelis?</h1>
+                    :
                     <ul>
                         {movies.map(({ Title }) => (
                             <li key={Title}>{Title}</li>
                         ))}
                     </ul>
             }
-            {/* <ul>
-                {movies.map(({ Title }) => (
-                    <li key={Title}>{Title}</li>
-                ))}
-            </ul> */}
         </div>
 
     );

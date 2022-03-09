@@ -1,4 +1,9 @@
-export const ADD_MOVIE ="ADD_MOVIE";
+export const ADD_MOVIE = "ADD_MOVIE";
 
 
-export const addMovie = (movie)=>{return {type:"ADD_USER", payload: favoriteMovie}};
+export const addMovie = favoriteMovie => {
+    return {
+        type: "ADD_MOVIE",
+        payload: favoriteMovie
+    }
+};

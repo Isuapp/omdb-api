@@ -1,6 +1,6 @@
 const initialState = {
     favoriteMovies:[],
-    starWarsMovies: []
+    LordOfTheRingsMovies: []
 }
 
 

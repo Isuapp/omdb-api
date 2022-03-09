@@ -5,9 +5,9 @@ const useMovies = ()=>{
     const API_KEY = "731e41f";
     const URL = `http://www.omdbapi.com/?&apikey=${API_KEY}` 
 
-    // Manjeador del estado
+    // Handle the state
     const [movies, setMovies] = useState([])
-    // Llamar y escuchar a la API
+    // Call and listen API
     useEffect(()=>{
         fetch(URL)
         .then(response=>response.json())

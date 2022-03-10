@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Sandbox from './components/sandbox';
+import Sandbox from './sections/sandbox';
+
 
 function App() {
   return (

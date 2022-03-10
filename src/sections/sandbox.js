@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import SearchSection from "../sections/SearchSection";
-import useSearchMovies from "../store/hooks/useSearchMovies";
-import SearchBox from "./fields/SearchBox";
+import FavoriteCarousel from "../components/carousels/FavoriteCarousel";
+import SearchSection from "./SearchSection";
+// import useSearchMovies from "../store/hooks/useSearchMovies";
+// import SearchBox from "../components/fields/SearchBox";
 
 const Sandbox = () => {
 
@@ -27,29 +28,30 @@ const Sandbox = () => {
     ////////////////////////////////////////////////////////////////////
 
 
-    const [search, setSearch] = useState('');
-    const [movies, setMovies] = useState([]);
+    // const [search, setSearch] = useState('');
+    // const [movies, setMovies] = useState([]);
 
-    const { searchMovies } = useSearchMovies();
+    // const { searchMovies } = useSearchMovies();
 
-    const onChangeHandler = async (e) => {
-        setSearch(e.target.value)
-        try {
-            const movies = await searchMovies(search);
-            console.log('MOVIES', movies)
-            setMovies(movies);
-        } catch (error) {
-            // handle error/set any error state/etc...
-        }
+    // const onChangeHandler = async (e) => {
+    //     setSearch(e.target.value)
+    //     try {
+    //         const movies = await searchMovies(search);
+    //         console.log('MOVIES', movies)
+    //         setMovies(movies);
+    //     } catch (error) {
+    //         // handle error/set any error state/etc...
+    //     }
+    // }
 
-    }
 
+  
 
 
     return (
         <div>
             <h1>Sandbox</h1>
-            <SearchBox 
+            {/* <SearchBox 
                 placeholder="Search..."
                 value={search}
                 change={onChangeHandler}
@@ -64,8 +66,11 @@ const Sandbox = () => {
                             <li key={Title}>{Title}</li>
                         ))}
                     </ul>
-            }
+            } */}
             <SearchSection />
+            <FavoriteCarousel />
+            
+
         </div>
 
     );

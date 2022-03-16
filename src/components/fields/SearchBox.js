@@ -1,4 +1,5 @@
 import React from "react";
+import "../../assets/styles/SearchBox.css"
 
 export const SearchBox = props =>{
 
@@ -10,7 +11,7 @@ export const SearchBox = props =>{
     } = props;
 
     return(
-        <div>
+        <div className="wraper-searchbox">
             <label>{label}</label>
         <input
             value={value}

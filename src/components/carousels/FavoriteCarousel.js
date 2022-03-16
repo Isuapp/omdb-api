@@ -1,25 +1,33 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import SmallCard from "../card/SmallCard";
+import Carousel from "../../components/carousels/Carousel";
+import CarouselItem from "../../components/carousels/CarouselItem";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteMovie } from "../../store/actions";
+import { Subtitle } from "../text/Text";
 
 
 export const FavoriteCarousel = () => {
 
     const favoriteMovies = useSelector(state => state.favoriteMovies)
-    console.log('favoriteMovies en sandbox', favoriteMovies)
+    const dispatch = useDispatch()
 
     return (
-        <div className="favoritesSection">
+        <div>
+        <Subtitle>Favorites</Subtitle>
+        <Carousel>
             {
                 favoriteMovies.map(favorites =>
-                    <SmallCard
+                    <CarouselItem
                         title={favorites.Title}
                         image={favorites.Poster}
                         alt={favorites.title}
                         year={favorites.Year}
+                        click={() => { dispatch(deleteMovie(favorites)) }}
                     />
                 )}
-        </div>
+        </Carousel>
+    </div>
+
     )
 }
 

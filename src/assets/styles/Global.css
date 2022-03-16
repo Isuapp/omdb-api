@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+    align-items:center ;
+}
+body{
+    padding: 0px;
+    background-color: #121222;
+}

@@ -1,16 +1,20 @@
 const initialState = {
-    favoriteMovies:[],
-    LordOfTheRingsMovies: []
+    favoriteMovies: [],
 }
 
 
-const reducer = (state=initialState, action) => {
+const reducer = (state = initialState, action) => {
 
     switch (action.type) {
         case "ADD_MOVIE":
-            return { ...state, favoriteMovies: [...state.favoriteMovies, action.payload]}
-            default:
-                return state;
+            return {
+                ...state,
+                favoriteMovies: [...state.favoriteMovies, action.payload]
+            }
+        case "DELETE_MOVIE":
+            return { favoriteMovies: state.favoriteMovies.filter((favoriteMovie)=>favoriteMovie !==action.payload)}
+        default:
+            return state;
     }
 }
 

@@ -1,0 +1,107 @@
+/* //////////******CAROUSEL////////// 
+////////////////////////////////////*/
+.carousel {
+    overflow: hidden;
+    /* border: 1px solid green; */
+}
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+    /* border: 1px solid pink; */
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    /* border:1px solid red; */
+    display:flex ;
+    justify-content: end;
+}
+.indicators > button {
+    margin: 5px;
+    border:2.5px solid #80ffdb;
+    background-color:#121222;
+    border-radius: 10px;
+    padding:5px 10px;
+    color:#80ffdb;
+    cursor: pointer;
+    font-size: 24px;
+}
+.indicators > button.active {
+    color: antiquewhite;
+}
+
+/* ////////******CAROUSEL ITEM////////// 
+///////////////////////////////////////*/
+.carousel-item__wraper {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    overflow: hidden;
+    margin: 0 5px 0 5px;
+    /* border: 1px solid green; */
+}
+.carousel-item__image-wraper {
+    border-radius: 10px;
+    height: 250px;
+    overflow: hidden;
+}
+.carousel-item__image-wraper > img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    object-position: center;
+}
+.carousel-item__image-wraper > .content {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,.5);
+    height: 250px;
+}
+
+
+/* ANIMATIONS */
+.carousel-item__image-wraper > img,
+.carousel-item__image-wraper > .content{
+    transition: 200ms ease-in-out;
+}
+.carousel-item__image-wraper:hover >.content.fade{
+    opacity: 1;
+}
+.carousel-item__image-wraper >.content{
+    opacity: 0;
+}
+
+
+
+/*ADD BUTTON*/
+.carousel-item__image-wraper > .content > .carousel-item__add-button {
+    cursor: pointer;
+    border: 1.5px solid #f2e9e4;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.icon{
+        color:#4a4e69;
+        font-size: 24px;
+        font-weight: 800;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+}
+/*DATA*/
+.carousel-item__data {
+    overflow: inherit;
+    white-space: normal;
+    overflow: hidden;
+    max-height: 60px;
+    
+}

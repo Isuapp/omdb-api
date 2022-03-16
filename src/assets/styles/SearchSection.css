@@ -1,0 +1,10 @@
+.search-section{
+    padding: 0px;
+    margin: 0px;
+    
+}
+.search-result{
+    padding: 0px;
+    margin: 30px 20px;
+    display: flexbox;
+}

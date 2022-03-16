@@ -1,0 +1,21 @@
+.wraper-searchbox{
+    margin:20px;
+    padding:20px 10px;
+    border:1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.wraper-searchbox>input{
+    border:0px;
+    background-color: #121222;
+    text-align: center;
+    border-bottom: 1px solid #f2e9e4;
+    color: #f2e9e4;
+    font-size: 24px;
+    width: 25%;
+}
+.wraper-searchbox>input:focus-visible{
+    outline: none;
+    color: #f2e9e4;
+}

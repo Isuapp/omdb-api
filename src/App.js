@@ -1,14 +1,11 @@
 import logo from './logo.svg';
-import './App.css';
+import "../src/assets/styles/Global.css"
 import Sandbox from './sections/sandbox';
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>oMdb API</h1>
-      </header>
+    <div className="app">
       <Sandbox/>
     </div>
   );

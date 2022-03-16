@@ -4,6 +4,7 @@ import SmallCard from "../components/card/SmallCard";
 import useSearchMovies from "../store/hooks/useSearchMovies";
 import { addMovie } from "../store/actions";
 import { useDispatch, useSelector } from "react-redux";
+import "../assets/styles/SearchSection.css"
 
 export const SearchSection = () => {
 
@@ -28,7 +29,7 @@ export const SearchSection = () => {
 
     const dispatch = useDispatch()
     return (
-        <div>
+        <div className="search-section">
             <SearchBox
                 placeHolder="Search"
                 change={onChangeHandler}
@@ -36,9 +37,9 @@ export const SearchSection = () => {
             />
             {movies === undefined
                 ?
-                <h1>Movies?</h1>
+                <h3>Searching...</h3>
                 :
-                <div>
+                <div className="search-result">
                     {movies.map(movie =>
                         <SmallCard
                             title={movie.Title}

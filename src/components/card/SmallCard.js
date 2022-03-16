@@ -1,23 +1,32 @@
 import React from "react";
-import '../../../src/App.css'
+import '../../assets/styles/SmallCard.css'
+import { BiPlus } from "react-icons/bi";
+import { MovieTitle } from "../text/Text";
 
 
 export const SmallCard = props => {
-    const { title, image, alt, year, click } = props
+    const { title, image, alt, year, click, style } = props
 
 
     return (
-        <div>
-            <div className="divimage">
-                <img src={image} className="image" alt={alt} />
-                <button
-                    onClick={click}
-                >ADD</button>
+        <div className="wraper-smallcard" style={style}>
+            <div className="wraper-smallcard__image">
+                <img src={image} alt={alt} />
+                <div className="content fade">
+                    <div
+                        className="action-button"
+                        onClick={click}
+                    >
+                        <BiPlus className="icon"/>
+                    </div>
+                    <MovieTitle>{title}</MovieTitle>
+                </div>
             </div>
-
-            <h4>{title}</h4>
-            <p>{year}</p>
+            {/* <div className="data">
+                <p>{title}</p>
+            </div> */}
         </div>
+
     )
 }
 
